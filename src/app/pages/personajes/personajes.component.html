@@ -3,16 +3,10 @@
 <app-loading *ngIf="loading"></app-loading>
 <div *ngIf="!loading">
   <h3>Cantidad de registros: {{ cantidad }}</h3>
-  <div class="card-columns">
-    <div class="card">
-        <img [src]="personaje1.image" class="card-img-top" [alt]="personaje1.name">
-        <div class="card-body">
-            <h5 class="card-title">{{ personaje1.name }}</h5>
-            <p class="card-text"> especie: {{personaje1.species }} </p>
-        </div>
-    </div>
+  <div class="card-columns"> 
+      <div *ngFor="let personaje of result">
+        <app-card [personaje]="personaje" ></app-card>
+      </div>
   </div>
-  <ul>
-    <li *ngFor="let personaje of result">{{ personaje.name }}</li>
-  </ul>
+ 
 </div>

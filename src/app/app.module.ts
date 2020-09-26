@@ -7,12 +7,14 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './pages/home/home.component';
 import { PersonajesComponent } from './pages/personajes/personajes.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DetalleComponent } from './pages/personajes/components/detalle/detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    PersonajesComponent
+    PersonajesComponent,
+    DetalleComponent
   ],
   imports: [
     BrowserModule,
