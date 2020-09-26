@@ -9,20 +9,9 @@ import { PersonajesService } from './providers/personajes.service';
   styleUrls: ['./personajes.component.css'],
 })
 export class PersonajesComponent implements OnInit {
-  personajes: Observable<CharacterResponse> = new Observable();
-  cantidad: number;
-  result: Result[];
-  loading = false;
-  personaje1: Result;
-  constructor(private personajesService: PersonajesService) {
-    this.personajes = this.personajesService.obtenerPersonajes();
-    this.loading = true;
-    this.personajes.subscribe(({ info, results }) => {
-      this.loading = false;
-      console.log(info, results);
-      this.cantidad = info.count;
-      this.result = results;
-    });
+
+  constructor() {
+
   }
 
   ngOnInit(): void {}
