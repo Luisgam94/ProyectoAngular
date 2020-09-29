@@ -14,7 +14,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
   imports: [
     CommonModule,
     PersonajesRoutingModule,
-    SharedModule
-  ]
+    SharedModule,
+    //RouterModule
+  ],
+  exports: [ListaComponent, DetalleComponent, PersonajesComponent]
 })
 export class PersonajesModule { }

@@ -6,7 +6,10 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'personajes', loadChildren: () => import('./pages/personajes/personajes.module').then((m) => m.PersonajesModule) },
-  {path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)},
+  { path: 'locaciones', loadChildren: () => import('./pages/locaciones/locaciones.module').then((m) => m.LocacionesModule) },
+
+  //{ path: 'personajes/:id', loadChildren: () => import('./pages/personajes/components/detalle/detalle.module').then((m) => m.DetalleModule) },
+  { path: 'home', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule)},
   { path: '**', redirectTo: 'home' },
 ];
 

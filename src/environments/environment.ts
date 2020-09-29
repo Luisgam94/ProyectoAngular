@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   baseurl: 'https://rickandmortyapi.com/api/',
   endpoints: {
-    character: 'character'
+    character: 'character',
+    location: 'location'
   }
 };
 
